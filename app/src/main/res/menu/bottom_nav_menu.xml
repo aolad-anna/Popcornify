@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:enabled="true"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/navigation_movie"
+        android:icon="@drawable/ic_movie"
+        android:enabled="true"
+        android:title="MOVIE" />
+
+    <item
+        android:id="@+id/navigation_series"
+        android:icon="@drawable/ic_series"
+        android:enabled="true"
+        android:title="SERIES" />
+
+<!--    <item-->
+<!--        android:id="@+id/button"-->
+<!--        android:icon="@drawable/ic_notifications_black_24dp"-->
+<!--        android:enabled="false" />-->
+
+    <item
+        android:id="@+id/navigation_tv"
+        android:icon="@drawable/ic_tv"
+        android:enabled="true"
+        android:title="TV" />
+
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/menu"
+        android:enabled="true"
+        android:title="MENU" />
+
+</menu>

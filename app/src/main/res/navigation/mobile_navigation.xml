@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.popcornify.ui.home.Home"
+        android:label="HOME"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_movie"
+        android:name="com.example.popcornify.ui.movie.Movie"
+        android:label="MOVIE"
+        tools:layout="@layout/fragment_movie" />
+
+    <fragment
+        android:id="@+id/navigation_series"
+        android:name="com.example.popcornify.ui.series.Series"
+        android:label="SERIES"
+        tools:layout="@layout/fragment_series" />
+
+    <fragment
+        android:id="@+id/navigation_tv"
+        android:name="com.example.popcornify.ui.tv.Tv"
+        android:label="TV"
+        tools:layout="@layout/fragment_tv" />
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.example.popcornify.ui.menu.Menu"
+        android:label="MENU"
+        tools:layout="@layout/fragment_menu" />
+</navigation>
