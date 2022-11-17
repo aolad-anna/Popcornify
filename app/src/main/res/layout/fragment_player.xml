@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:background="#232B59"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPlayer"
+        app:cardBackgroundColor="#E91E63"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#232B59"
+                android:visibility="visible"
+                app:hide_on_touch="true"
+                app:resize_mode="fill"
+                app:show_buffering="always"
+                app:show_timeout="2000">
+
+            </com.google.android.exoplayer2.ui.PlayerView>
+
+            <ProgressBar
+                android:id="@+id/progress0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="#F34A84"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/exo_fullscreen"
+            style="@style/ExoStyledControls.Button.Bottom.FullScreen"
+            android:tintMode="src_in"
+            android:layout_gravity="bottom|right"
+            app:tint="#7E686666"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

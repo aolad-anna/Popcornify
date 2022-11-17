@@ -7,13 +7,18 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.popcornify.R
+import com.example.popcornify.databinding.FragmentPlayerBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.delay
 
 
@@ -46,6 +51,10 @@ class Home : Fragment() {
 //        lottieJs?.loop(true)
         lottieJs?.setOnClickListener{
             findNavController().navigate(R.id.navigation_home)
+        }
+        val sheetB = activity?.findViewById<Button>(R.id.play)
+        sheetB?.setOnClickListener {
+            findNavController().navigate(R.id.navigation_bottomSheet)
         }
     }
 }

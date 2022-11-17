@@ -34,4 +34,10 @@
         android:name="com.example.popcornify.ui.menu.Menu"
         android:label="MENU"
         tools:layout="@layout/fragment_menu" />
+
+    <dialog
+        android:id="@+id/navigation_bottomSheet"
+        android:name="com.example.popcornify.ui.player.Player"
+        android:label="MENU"
+        tools:layout="@layout/fragment_player" />
 </navigation>
