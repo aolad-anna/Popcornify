@@ -1,6 +1,7 @@
 package com.example.popcornify.ui.home
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import androidx.navigation.fragment.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.popcornify.R
 import com.example.popcornify.databinding.FragmentPlayerBinding
+import com.example.popcornify.ui.splash.NavBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.delay
@@ -56,5 +58,10 @@ class Home : Fragment() {
         sheetB?.setOnClickListener {
             findNavController().navigate(R.id.navigation_bottomSheet)
         }
+        Handler().postDelayed({
+            val controll = activity?.findViewById<View>(R.id.placeHolderHome)
+            controll?.visibility=View.GONE
+            sheetB?.visibility=View.VISIBLE
+        }, 4000)
     }
 }

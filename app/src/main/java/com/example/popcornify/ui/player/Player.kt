@@ -82,6 +82,7 @@ class Player : BottomSheetDialogFragment() {
             .also { exoPlayer ->
                 dialogBinding.videoView.player = exoPlayer
                 dialogBinding.videoView.resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FILL
+
                 val mediaItem = MediaItem.Builder()
                     .setUri(playUrl)
                     .setMimeType(MimeTypes.APPLICATION_MPD)
