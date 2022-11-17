@@ -35,13 +35,23 @@ class Player : BottomSheetDialogFragment() {
         val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
 
         dialog.setContentView(dialogBinding.root)
-//        dialog.setCancelable(false)
-//        dialog.setCanceledOnTouchOutside(false)
+        dialog.setCancelable(false)
+        dialog.setCanceledOnTouchOutside(false)
         val parent = dialogBinding.root.parent as View
         val bottomSheetBehavior = BottomSheetBehavior.from(parent)
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        dialogBinding.closeDialog.setOnClickListener {
+            player?.run {
+                playbackPosition = this.currentPosition
+                currentWindow = this.currentWindowIndex
+                playWhenReady = this.playWhenReady
+                removeListener(playbackStateListener)
+                release()
+            }
+            player = null
+            dialog.dismiss()
+        }
         return dialog
-
     }
 
     override fun onStart() {
