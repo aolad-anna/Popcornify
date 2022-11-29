@@ -1,7 +1,5 @@
 package com.example.popcornify.ui.movie
 
-import android.content.Intent
-import android.net.Uri
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,19 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.popcornify.R
-import com.example.popcornify.ui.splash.NavBar
 
-class Movie : Fragment() {
+class MoviePageFragment : Fragment() {
 
     companion object {
-        fun newInstance() = Movie()
+        fun newInstance() = MoviePageFragment()
     }
 
-    private lateinit var viewModel: MovieViewModel
+    private lateinit var viewModel: MoviePageViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +28,7 @@ class Movie : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MoviePageViewModel::class.java)
         val toolbar = activity?.findViewById<TextView>(R.id.message_tv)
         toolbar?.text = "Movie"
 

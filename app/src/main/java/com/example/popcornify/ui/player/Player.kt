@@ -1,6 +1,8 @@
 package com.example.popcornify.ui.player
 
 import android.app.Dialog
+import android.content.Intent
+import android.content.Intent.getIntent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -16,6 +18,13 @@ import com.google.android.exoplayer2.util.MimeTypes
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import retrofit2.http.Url
+import java.net.URI
+import android.content.Intent.getIntent
+
+
+
+
 
 class Player : BottomSheetDialogFragment() {
 
@@ -24,7 +33,8 @@ class Player : BottomSheetDialogFragment() {
     private var playWhenReady = true
     private var currentWindow = 0
     private var playbackPosition = 0L
-    private var playUrl : String? = "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd"
+    private var playUrl : String? = null
+//    private var playUrl : String? = "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd"
     private val playbackStateListener: Player.EventListener = playbackStateListener()
 
     private val dialogBinding by lazy(LazyThreadSafetyMode.NONE) {
@@ -32,8 +42,12 @@ class Player : BottomSheetDialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
+        val dataplayUrl = arguments?.getString("playUrl")
+        playUrl = dataplayUrl
 
+        Log.i("Anna","$playUrl")
+
+        val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
         dialog.setContentView(dialogBinding.root)
         dialog.setCancelable(false)
         dialog.setCanceledOnTouchOutside(false)
@@ -95,7 +109,7 @@ class Player : BottomSheetDialogFragment() {
 
                 val mediaItem = MediaItem.Builder()
                     .setUri(playUrl)
-                    .setMimeType(MimeTypes.APPLICATION_MPD)
+//                    .setMimeType(MimeTypes.BASE_TYPE_APPLICATION)
                     .build()
                 exoPlayer.setMediaItem(mediaItem)
                 exoPlayer.playWhenReady = playWhenReady

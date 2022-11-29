@@ -15,6 +15,7 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.popcornify.R
+import com.example.popcornify.ui.api.InternetConnection
 
 
 class MainActivity : AppCompatActivity() {

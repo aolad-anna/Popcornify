@@ -1,4 +1,4 @@
-package com.example.popcornify.ui.splash;
+package com.example.popcornify.ui.api;
 
 import android.content.Context;
 

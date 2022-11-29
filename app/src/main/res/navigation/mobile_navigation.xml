@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.popcornify.ui.home.Home"
+        android:name="com.example.popcornify.ui.home.HomePageFragment"
         android:label="HOME"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_movie"
-        android:name="com.example.popcornify.ui.movie.Movie"
+        android:name="com.example.popcornify.ui.movie.MoviePageFragment"
         android:label="MOVIE"
         tools:layout="@layout/fragment_movie" />
 
