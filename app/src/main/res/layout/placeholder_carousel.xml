@@ -23,7 +23,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cr1"
-                android:layout_width="300dp"
+                android:layout_width="265dp"
                 android:layout_height="160dp"
                 android:clickable="true"
                 android:layout_gravity="center"
@@ -32,7 +32,7 @@
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="300dp"
+                    android:layout_width="265dp"
                     android:layout_height="160dp"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/blueprint2" />

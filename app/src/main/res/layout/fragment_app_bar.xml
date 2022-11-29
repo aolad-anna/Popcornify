@@ -42,7 +42,7 @@
             android:textColor="#FF9800"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="Title"
+            android:text="Popcornify"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/searchEn"
             app:layout_constraintHorizontal_bias="0.040"
